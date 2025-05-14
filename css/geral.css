@@ -1,0 +1,143 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.main-title {
+    padding: 4rem 0 3rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.main-title h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.main-title p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #555;
+}
+
+.card-calculator {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    background-color: #e6ffe6;
+    border-radius: 20px;
+}
+
+.card-calculator:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background-color: #d4ffd4;
+}
+
+.calculator-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.card-grafico {
+    margin: 2em;
+}
+
+.grafico {
+    height: 30em;
+}
+
+.img-calculo {
+    width: 100%;
+}
+
+#profile {
+    margin: 10px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    height: 20em;
+}
+
+.descricao {
+    color: gray;
+    text-decoration: none;
+}
+
+.link {
+    color: initial;
+    text-decoration: none;
+}
+.link:hover {
+    text-decoration: underline;
+}
+
+#jams_custoMedioMaterial {
+    border-color: #28a745;
+}
+
+.input-group-text {
+    background-color: #e6ffe6;
+    border-color: #28a745;
+    color: #28a745;
+    font-weight: 500;
+}
+
+.card {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background-color: #e6ffe6;
+    border-bottom: none;
+    border-radius: 15px 15px 0 0 !important;
+    padding: 1.5rem;
+}
+
+.currency-input {
+    max-width: 250px;
+}
+
+.navigation-buttons {
+    margin-top: 2rem;
+}
+
+.resultado {
+    font-size: xx-large;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .main-title h1 {
+        font-size: 3rem;
+    }
+    
+    .main-title p {
+        font-size: 1.25rem;
+    }
+}

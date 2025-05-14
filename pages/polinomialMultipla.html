@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Custo Médio - Calculadora Matemática</title>
+    <!-- Google Fonts - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/geral.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary  border-bottom border-body" data-bs-theme="dark">
+            <div class="container">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Início</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Previsões
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="linearSimples.html">Regressão Linear Simples</a></li>
+                            <li><a class="dropdown-item" href="polinomialSimples.html">Regressão Polinomial Simples</a></li>
+                            <li><a class="dropdown-item" href="polinomialMultipla.html">Regressão Polinomial Múltipla</a></li>
+                        </ul>
+                    </li>
+                    <a class="nav-link" href="../detalhes.html">Detalhes</a>
+                    <a class="nav-link" href="../graficos.html">Gráficos</a>
+                    <a class="nav-link" href="../sobre.html">Sobre nós</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Título Principal -->
+        <div class="main-title text-center">
+            <h1>Regressão Polinomial Múltipla</h1>
+            <p class="lead">Para fazer a previsão de Custo Médio do m² insira como variável independente o <strong>Mês, Ano e Custo médio m² - componente material - moeda corrente (Reais)</strong></p>
+        </div>
+        
+        <!-- Formulário de Entrada -->
+        <div id="calculo" class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4 class="mb-0">Dados de Entrada</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="jams_formPolinomialMultipla" action="#">
+                            <!-- Período (Mês e Ano) -->
+                            <div class="row mb-4">
+                                <div class="col-12 mb-3">
+                                    <h5>Período de Referência</h5>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="jams_mes" class="form-label">Mês</label>
+                                    <select class="form-select month-select" id="jams_mes" required>
+                                        <option value="" selected disabled>Selecione...</option>
+                                        <option value="1">Janeiro</option>
+                                        <option value="2">Fevereiro</option>
+                                        <option value="3">Março</option>
+                                        <option value="4">Abril</option>
+                                        <option value="5">Maio</option>
+                                        <option value="6">Junho</option>
+                                        <option value="7">Julho</option>
+                                        <option value="8">Agosto</option>
+                                        <option value="9">Setembro</option>
+                                        <option value="10">Outubro</option>
+                                        <option value="11">Novembro</option>
+                                        <option value="12">Dezembro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="jams_ano" class="form-label">Ano</label>
+                                    <input type="number" class="form-control" id="jams_ano" min="2000" placeholder="Ano" required>
+                                </div>
+                            </div>
+                            
+                            <!-- Custo Médio -->
+                            <div class="row mb-4">
+                                <div class="col-12 mb-3">
+                                    <h5>Valores de Custo</h5>
+                                </div>
+                                <div class="col-md-8 mb-3">
+                                    <label for="jams_custoMedioMaterial" class="form-label">Valor do Custo médio m² - componente material (Reais)</label>
+                                    <div class="input-group currency-input">
+                                        <span class="input-group-text">R$</span>
+                                        <input type="number" class="form-control" id="jams_custoMedioMaterial" step="0.01" min="0" placeholder="0,00" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Botões -->
+                            <div class="row navigation-buttons">
+                                <div class="col-6">
+                                    <a href="../index.html" class="btn btn-outline-secondary">
+                                        <i class="bi bi-arrow-left"></i> Voltar
+                                    </a>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <a href="polinomialMultipla.html" class="btn btn-outline-info">
+                                        <i class="bi bi-arrow-counterclockwise"></i> Novo cálculo
+                                    </a>
+                                    <button type="submit" class="btn btn-success px-4">
+                                        Calcular 
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card mb-4" id="div-resultado">
+                    <div class="card-header">
+                        <h4 class="mb-0">Resultado - Previsão do valor do Custo médio m² (Reais)</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <span class="resultado" id="jams_custoMedio"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4 class="mb-0">Gráfico Gerado</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <img class="img-calculo" src="../img/Polinomial-Multipla-4 (melhor).png" alt="">
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4 class="mb-0">Valores dos coeficientes gerados</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <img class="img-calculo" src="../img/coef-polinomialMultipla.png" alt="">
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4 class="mb-0">Fórmula utilizada</h4>
+                    </div>
+                    <div class="card-body p-4 text-center">
+                        <p class="text-break">f(mes, ano, material) = ((a*mes<sup>4</sup>)+(b*ano<sup>4</sup>)+(c*material<sup>4</sup>)) + ((d*mes³)+(e*ano³)+(f*material³)) + ((g*mes²)+(h*ano²)+(i*material²)) + ((j*mes)+(k*ano)+(l*material)) + m</p>
+                        <br>
+                        <p class="text-break">f(mes, ano, material) = ((0.0110101489158478*mes<sup>4</sup>)+(-0.105495327381683*ano<sup>4</sup>)+(-0.00000000171648636676198*material<sup>4</sup>)) + ((-0.342931554999148*mes³)+(853.084026790307*ano³)+(0.00000670123676581738*material³)) + ((3.39366945176686*mes²)+(-2586912.76097031*ano²)+(-0.00867244028970531*material²)) + ((-8.15948644181764*mes)+(3486497532.30607*ano)+(5.50389068204663*material)) + -1762091021382.07</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">© 2025 João Augusto Marciano Silva | Todos os direitos reservados</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- jQuery e Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JS próprio -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

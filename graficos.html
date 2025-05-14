@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligência de Negócios</title>
+    <!-- Google Fonts - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS próprio -->
+    <link rel="stylesheet" href="css/geral.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary  border-bottom border-body" data-bs-theme="dark">
+            <div class="container">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Previsões
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pages/linearSimples.html">Regressão Linear Simples</a></li>
+                            <li><a class="dropdown-item" href="pages/polinomialSimples.html">Regressão Polinomial Simples</a></li>
+                            <li><a class="dropdown-item" href="pages/polinomialMultipla.html">Regressão Polinomial Múltipla</a></li>
+                        </ul>
+                    </li>
+                    <a class="nav-link" href="detalhes.html">Detalhes</a>
+                    <a class="nav-link" href="graficos.html">Gráficos</a>
+                    <a class="nav-link" href="sobre.html">Sobre nós</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container py-4">
+        <div class="main-title text-center">
+            <h1>Gráficos Gerados no Knime</h1>
+            <p class="lead">Abaixo estão todos os possíveis gráficos gerados pelo Knime.</p>
+        </div>
+
+        <div>
+            <h2>Índice</h2>
+            <ul>
+                <strong>Linear</strong>
+                <ul>
+                    <li><a class="link" href="#linear-simples">Linear Simples</a></li>
+                    <li><a class="link" href="#linear-multipla">Linear Múltipla</a></li>
+                </ul>
+                <strong>Polinomial Simples</strong>
+                <ul>
+                    <li><a class="link" href="#polinomial-simples-1">Polinomial Simples de grau 1</a></li>
+                    <li><a class="link" href="#polinomial-simples-2">Polinomial Simples de grau 2</a></li>
+                    <li><a class="link" href="#polinomial-simples-3">Polinomial Simples de grau 3</a></li>
+                    <li><a class="link" href="#polinomial-simples-4">Polinomial Simples de grau 4</a></li>
+                    <li><a class="link" href="#polinomial-simples-5">Polinomial Simples de grau 5</a></li>
+                    <li><a class="link" href="#polinomial-simples-6">Polinomial Simples de grau 6</a></li>
+                    <li><a class="link" href="#polinomial-simples-7">Polinomial Simples de grau 7</a></li>
+                    <li><a class="link" href="#polinomial-simples-8">Polinomial Simples de grau 8</a></li>
+                    <li><a class="link" href="#polinomial-simples-9">Polinomial Simples de grau 9 (melhor)</a></li>
+                    <li><a class="link" href="#polinomial-simples-10">Polinomial Simples de grau 10</a></li>
+                </ul>
+                <strong>Polinomial Múltipla</strong>
+                <ul>
+                    <li><a class="link" href="#polinomial-multipla-1">Polinomial Múltipla de grau 1</a></li>
+                    <li><a class="link" href="#polinomial-multipla-2">Polinomial Múltipla de grau 2</a></li>
+                    <li><a class="link" href="#polinomial-multipla-3">Polinomial Múltipla de grau 3</a></li>
+                    <li><a class="link" href="#polinomial-multipla-4">Polinomial Múltipla de grau 4 (melhor)</a></li>
+                    <li><a class="link" href="#polinomial-multipla-5">Polinomial Múltipla de grau 5</a></li>
+                    <li><a class="link" href="#polinomial-multipla-6">Polinomial Múltipla de grau 6</a></li>
+                    <li><a class="link" href="#polinomial-multipla-7">Polinomial Múltipla de grau 7</a></li>
+                    <li><a class="link" href="#polinomial-multipla-8">Polinomial Múltipla de grau 8</a></li>
+                    <li><a class="link" href="#polinomial-multipla-9">Polinomial Múltipla de grau 9</a></li>
+                    <li><a class="link" href="#polinomial-multipla-10">Polinomial Múltipla de grau 10</a></li>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="text-center">
+            <div class="card-grafico">
+                <h2 id="linear-simples">Regressão Linear Simples</h2>
+                <img class="grafico" src="./img/Linear-Simples.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="linear-multipla">Regressão Linear Múltipla</h2>
+                <img class="grafico" src="./img/Linear-Multipla.png" alt="">
+            </div>
+
+            <hr>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-simples-1">Polinomial Simples de grau 1</h2>
+                <img class="grafico" src="./img/Polinomial-Simples-1.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-simples-2">Polinomial Simples de grau 2</h2>
+                <img class="grafico" src="./img/Polinomial-Simples-2.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-simples-3">Polinomial Simples de grau 3</h2>
+                <img class="grafico" src="./img/Polinomial-Simples-3.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-simples-4">Polinomial Simples de grau 4</h2>
+                <img class="grafico" src="./img/Polinomial-Simples-4.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-simples-5">Polinomial Simples de grau 5</h2>
+                <img class="grafico" src="./img/Polinomial-Simples-5.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-simples-6">Polinomial Simples de grau 6</h2>
+                <img class="grafico" src="./img/Polinomial-Simples-6.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-simples-7">Polinomial Simples de grau 7</h2>
+                <img class="grafico" src="./img/Polinomial-Simples-7.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-simples-8">Polinomial Simples de grau 8</h2>
+                <img class="grafico" src="./img/Polinomial-Simples-8.png" alt="">
+            </div>
+            
+            <div class="card-grafico">
+                <h2 id="polinomial-simples-9">Polinomial Simples de grau 9 (melhor)</h2>
+                <img class="grafico" src="./img/Polinomial-Simples-9 (melhor).png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-simples-10">Polinomial Simples de grau 10</h2>
+                <img class="grafico" src="./img/Polinomial-Simples-10.png" alt="">
+            </div>
+
+            <hr>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-multipla-1">Polinomial Múltipla de grau 1</h2>
+                <img class="grafico" src="./img/Polinomial-Multipla-1.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-multipla-2">Polinomial Múltipla de grau 2</h2>
+                <img class="grafico" src="./img/Polinomial-Multipla-2.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-multipla-3">Polinomial Múltipla de grau 3</h2>
+                <img class="grafico" src="./img/Polinomial-Multipla-3.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-multipla-4">Polinomial Múltipla de grau 4 (melhor)</h2>
+                <img class="grafico" src="./img/Polinomial-Multipla-4 (melhor).png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-multipla-5">Polinomial Múltipla de grau 5</h2>
+                <img class="grafico" src="./img/Polinomial-Multipla-5.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-multipla-6">Polinomial Múltipla de grau 6</h2>
+                <img class="grafico" src="./img/Polinomial-Multipla-6.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-multipla-7">Polinomial Múltipla de grau 7</h2>
+                <img class="grafico" src="./img/Polinomial-Multipla-7.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-multipla-8">Polinomial Múltipla de grau 8</h2>
+                <img class="grafico" src="./img/Polinomial-Multipla-8.png" alt="">
+            </div>
+            
+            <div class="card-grafico">
+                <h2 id="polinomial-multipla-9">Polinomial Múltipla de grau 9</h2>
+                <img class="grafico" src="./img/Polinomial-Multipla-9.png" alt="">
+            </div>
+
+            <div class="card-grafico">
+                <h2 id="polinomial-multipla-10">Polinomial Múltipla de grau 10</h2>
+                <img class="grafico" src="./img/Polinomial-Multipla-10.png" alt="">
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="#top" class="link">voltar ao topo</a>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">© 2025 João Augusto Marciano Silva | Todos os direitos reservados</p>
+        </div>
+    </footer>
+    
+    <!-- jQuery e Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
